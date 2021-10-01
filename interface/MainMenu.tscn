@@ -1,5 +1,82 @@
-[gd_scene format=2]
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://interface/fonts/contrail_one_32.tres" type="DynamicFont" id=1]
+[ext_resource path="res://interface/fonts/contrail_one_16.tres" type="DynamicFont" id=2]
+[ext_resource path="res://interface/MainMenu.gd" type="Script" id=3]
+[ext_resource path="res://game/Game.tscn" type="PackedScene" id=4]
+[ext_resource path="res://interface/options/Options.tscn" type="PackedScene" id=5]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+game_scene = ExtResource( 4 )
+options_scene = ExtResource( 5 )
+
+[node name="List" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 50.0
+margin_bottom = -5.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_constants/separation = 15
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="List"]
+margin_right = 640.0
+margin_bottom = 41.0
+custom_fonts/font = ExtResource( 1 )
+text = "Get to the Choppa!"
+align = 1
+valign = 1
+
+[node name="Start" type="Button" parent="List"]
+margin_left = 282.0
+margin_top = 56.0
+margin_right = 357.0
+margin_bottom = 103.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 1 )
+text = "Start"
+
+[node name="Options" type="Button" parent="List"]
+margin_left = 265.0
+margin_top = 118.0
+margin_right = 375.0
+margin_bottom = 165.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 1 )
+text = "Options"
+
+[node name="Quit" type="Button" parent="List"]
+margin_left = 287.0
+margin_top = 180.0
+margin_right = 353.0
+margin_bottom = 227.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 1 )
+text = "Quit"
+
+[node name="Credits" type="Label" parent="List"]
+margin_top = 284.0
+margin_right = 640.0
+margin_bottom = 305.0
+size_flags_horizontal = 13
+size_flags_vertical = 10
+custom_fonts/font = ExtResource( 2 )
+text = "Game made by @teixol for #ldjam49"
+align = 1
+
+[connection signal="pressed" from="List/Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="List/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="List/Quit" to="." method="_on_Quit_pressed"]
