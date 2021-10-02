@@ -19,6 +19,7 @@ export var died_signal_timer: float = 5.0
 var collective: float = 0 setget _set_collective
 var fuel_time: float = max_fuel_time setget _set_fuel_time
 var dead: bool = false
+var is_landed: bool = true
 
 func _physics_process(delta: float) -> void:
 	if dead:
@@ -86,3 +87,11 @@ func _on_PhysicsChopper_body_entered(body: Node) -> void:
 	#This is broken if you're not moving forward or sideways
 	if linear_velocity.length() > 5:
 		_die()
+
+func _on_LandingGear_landed() -> void:
+	print("landed")
+	is_landed = true
+
+func _on_LandingGear_took_off() -> void:
+	print("took off")
+	is_landed = false

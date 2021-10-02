@@ -1,13 +1,17 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://entities/chopper/PhysicsChopper.tscn" type="PackedScene" id=1]
 [ext_resource path="res://game/map/Map.tscn" type="PackedScene" id=2]
 [ext_resource path="res://game/Game.gd" type="Script" id=3]
 [ext_resource path="res://interface/end_game/EndGame.tscn" type="PackedScene" id=4]
 [ext_resource path="res://game/Level.gd" type="Script" id=5]
-[ext_resource path="res://game/weather/Weather.tscn" type="PackedScene" id=6]
+[ext_resource path="res://game/weather/HeavyRain.tscn" type="PackedScene" id=6]
+[ext_resource path="res://game/weather/Breeze.tscn" type="PackedScene" id=7]
+[ext_resource path="res://game/weather/HeavySnow.tscn" type="PackedScene" id=8]
+[ext_resource path="res://game/weather/Sunny.tscn" type="PackedScene" id=9]
+[ext_resource path="res://game/weather/LightRain.tscn" type="PackedScene" id=10]
 
-[sub_resource type="PhysicsMaterial" id=6]
+[sub_resource type="PhysicsMaterial" id=1]
 
 [node name="Game" type="Node"]
 script = ExtResource( 3 )
@@ -21,8 +25,8 @@ transform = Transform( 0.866026, 3.99273e-09, -0.5, 0.353553, 0.707107, 0.612373
 shadow_enabled = true
 
 [node name="PhysicsChopper" parent="Level" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
-physics_material_override = SubResource( 6 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, -4 )
+physics_material_override = SubResource( 1 )
 linear_damp = 0.5
 tail_engine_force = 5000.0
 
@@ -33,6 +37,14 @@ one_shot = true
 
 [node name="Weathers" type="Node" parent="Level"]
 
-[node name="Weather" parent="Level/Weathers" instance=ExtResource( 6 )]
+[node name="Sunny" parent="Level/Weathers" instance=ExtResource( 9 )]
+
+[node name="Breeze" parent="Level/Weathers" instance=ExtResource( 7 )]
+
+[node name="LightRain" parent="Level/Weathers" instance=ExtResource( 10 )]
+
+[node name="HeavyRain" parent="Level/Weathers" instance=ExtResource( 6 )]
+
+[node name="HeavySnow" parent="Level/Weathers" instance=ExtResource( 8 )]
 
 [connection signal="died" from="Level/PhysicsChopper" to="." method="_on_PhysicsChopper_died"]
