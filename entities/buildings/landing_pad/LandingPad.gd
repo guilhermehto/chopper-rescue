@@ -2,7 +2,7 @@ extends Spatial
 
 export var refuel_speed = 5.0
 
-var helicopter: Helicoper
+var helicopter: Helicopter
 
 func _ready() -> void:
 	set_process(false)
@@ -14,7 +14,7 @@ func _process(delta: float) -> void:
 	helicopter.fuel_time += refuel_speed * delta
 
 func _on_Area_body_entered(body: Node) -> void:
-	if body is Helicoper:
+	if body is Helicopter:
 		set_process(true)
 		helicopter = body
 

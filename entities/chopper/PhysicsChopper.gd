@@ -1,5 +1,5 @@
 extends RigidBody
-class_name Helicoper
+class_name Helicopter
 
 onready var mesh: Spatial = $ChopperMesh
 onready var timer: Timer = $Timer
