@@ -66,13 +66,16 @@ func _rotate_mesh(cyclic: Vector2, delta: float) -> void:
 func _check_fuel() -> void:
 	if fuel_time > 0:
 		return
+	_die()
 	
+
+func _die() -> void:
 	dead = true
 	self.fuel_time = 0
 	timer.wait_time = died_signal_timer
 	timer.start()
 	self.collective = 0
-	
+
 func _set_collective(value: float) -> void:
 	collective = clamp(value, 0, 1)
 
@@ -81,3 +84,8 @@ func _on_Timer_timeout() -> void:
 
 func _set_fuel_time(value: float) -> void:
 	fuel_time = clamp(value, 0, max_fuel_time)
+
+func _on_PhysicsChopper_body_entered(body: Node) -> void:
+	#This is broken if you're not moving forward or sideways
+	if linear_velocity.length() > 5:
+		_die()
