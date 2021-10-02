@@ -1,4 +1,5 @@
 extends RigidBody
+class_name Helicoper
 
 onready var mesh: Spatial = $ChopperMesh
 onready var timer: Timer = $Timer
@@ -16,7 +17,7 @@ export var max_fuel_time: float = 60
 export var died_signal_timer: float = 5.0
 
 var collective: float = 0 setget _set_collective
-var fuel_time: float = max_fuel_time
+var fuel_time: float = max_fuel_time setget _set_fuel_time
 var dead: bool = false
 
 func _physics_process(delta: float) -> void:
@@ -25,7 +26,7 @@ func _physics_process(delta: float) -> void:
 	if dead:
 		return
 	
-	fuel_time -= delta
+	self.fuel_time -= delta
 	
 	self.collective = collective + (float(Input.is_action_pressed("collective_up")) - float(Input.is_action_pressed("collective_down"))) * COLLECTIVE_SPEED * delta
 	add_force(global_transform.basis.y * engine_force * collective, Vector3.ZERO)
@@ -67,15 +68,16 @@ func _check_fuel() -> void:
 		return
 	
 	dead = true
-	fuel_time = 0
+	self.fuel_time = 0
 	timer.wait_time = died_signal_timer
 	timer.start()
 	self.collective = 0
 	
-
 func _set_collective(value: float) -> void:
 	collective = clamp(value, 0, 1)
 
-
 func _on_Timer_timeout() -> void:
 	emit_signal("died")
+
+func _set_fuel_time(value: float) -> void:
+	fuel_time = clamp(value, 0, max_fuel_time)

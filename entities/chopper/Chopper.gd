@@ -1,5 +1,4 @@
 extends KinematicBody
-class_name Chopper
 
 const COLLECTIVE_SPEED: float = 0.1 # how quickly the collective goes up and down
 const ROTATION_SPEED: float = 0.3

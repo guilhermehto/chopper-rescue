@@ -9,13 +9,13 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "KinematicBody",
-"class": "Chopper",
+"base": "RigidBody",
+"class": "Helicoper",
 "language": "GDScript",
-"path": "res://entities/chopper/Chopper.gd"
+"path": "res://entities/chopper/PhysicsChopper.gd"
 } ]
 _global_script_class_icons={
-"Chopper": ""
+"Helicoper": ""
 }
 
 [application]
