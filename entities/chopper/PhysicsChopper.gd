@@ -21,8 +21,6 @@ var fuel_time: float = max_fuel_time setget _set_fuel_time
 var dead: bool = false
 
 func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_home"):
-		emit_signal("died")
 	if dead:
 		return
 	
@@ -67,7 +65,6 @@ func _check_fuel() -> void:
 	if fuel_time > 0:
 		return
 	_die()
-	
 
 func _die() -> void:
 	dead = true
