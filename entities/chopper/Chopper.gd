@@ -2,7 +2,7 @@ extends KinematicBody
 class_name Chopper
 
 const COLLECTIVE_SPEED: float = 0.1 # how quickly the collective goes up and down
-const ROTATION_SPEED: float = 0.5
+const ROTATION_SPEED: float = 0.3
 const PEDAL_ROTATION_SPEED: float = 2.0
 const GRAVITY: float = 20.0
 # might need some rotational constraints

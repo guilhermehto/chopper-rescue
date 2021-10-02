@@ -21,7 +21,7 @@ func _physics_process(delta: float) -> void:
 	)
 	
 	add_torque(-global_transform.basis.z * tail_engine_force / 2 * cyclic.y)
-	add_torque(global_transform.basis.x * engine_force * cyclic.x)
+	add_torque(global_transform.basis.x * tail_engine_force * cyclic.x)
 	
 	var forward_force = Vector3.UP.dot(Vector3(0, rotation.x, 0))
 	add_force(global_transform.basis.z.rotated(global_transform.basis.x, 0) * engine_force * 2 * forward_force, Vector3.ZERO)
