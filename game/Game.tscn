@@ -19,6 +19,7 @@ data = PoolVector3Array( 250, 0, 250, -250, 0, 250, 250, 0, -250, -250, 0, 250, 
 albedo_color = Color( 1, 0.419608, 0.419608, 1 )
 
 [sub_resource type="PhysicsMaterial" id=6]
+friction = 50.0
 
 [node name="Game" type="Node"]
 
@@ -171,7 +172,7 @@ shadow_enabled = true
 [node name="PhysicsChopper" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0 )
 physics_material_override = SubResource( 6 )
-linear_damp = 1.0
+angular_damp = 2.0
 engine_force = 16000.0
 tail_engine_force = 2000.0
 
