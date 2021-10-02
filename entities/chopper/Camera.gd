@@ -5,8 +5,8 @@ var parent_transform: Transform
 
 var target: Vector3
 
-var default_following_speed: float = 20.0
-var catch_up_following_speed: float = 25.0
+var default_following_speed: float = 40
+var catch_up_following_speed: float = 40
 var desired_distance: float
 
 func _ready() -> void:
@@ -14,8 +14,6 @@ func _ready() -> void:
 	initial_global_position = global_transform.origin
 	desired_distance = target.distance_to(global_transform.origin)
 	desired_distance *= 1.25
-	
-	
 
 func _process(delta: float) -> void:
 	parent_transform = get_parent().global_transform

@@ -5,9 +5,9 @@ onready var mesh: Spatial = $ChopperMesh
 const COLLECTIVE_SPEED: float = 0.8 # how quickly the collective goes up and down
 const MAX_ROTATION: float = deg2rad(30)
 
-export var engine_force: float = 10000
-export var linear_force: float = 6000
-export var tail_engine_force: float = 3000
+export var engine_force: float = 17500
+export var linear_force: float = 20000
+export var tail_engine_force: float = 5000
 export var rotate_speed: float = .5
 
 var collective: float = 0 setget _set_collective
