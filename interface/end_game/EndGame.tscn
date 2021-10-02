@@ -1,0 +1,72 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://interface/fonts/contrail_one_32.tres" type="DynamicFont" id=1]
+[ext_resource path="res://interface/end_game/EndGame.gd" type="Script" id=2]
+[ext_resource path="res://interface/fonts/contrail_one_16.tres" type="DynamicFont" id=3]
+
+[node name="EndGame" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="List" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 24.0
+margin_top = 24.0
+margin_right = -24.0
+margin_bottom = -24.0
+custom_constants/separation = 25
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="List"]
+margin_right = 592.0
+margin_bottom = 85.0
+custom_fonts/font = ExtResource( 1 )
+text = "Test Test Test Test Test Test Test Test Test Test Test Test Test Test "
+align = 1
+autowrap = true
+
+[node name="TimePlayed" type="Label" parent="List"]
+margin_top = 110.0
+margin_right = 592.0
+margin_bottom = 131.0
+custom_fonts/font = ExtResource( 3 )
+align = 1
+valign = 1
+
+[node name="Rescued" type="Label" parent="List"]
+margin_top = 156.0
+margin_right = 592.0
+margin_bottom = 177.0
+custom_fonts/font = ExtResource( 3 )
+align = 1
+valign = 1
+
+[node name="TryAgain" type="Button" parent="List"]
+margin_left = 261.0
+margin_top = 202.0
+margin_right = 331.0
+margin_bottom = 229.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+text = "Try Again"
+
+[node name="Quit" type="Button" parent="List"]
+margin_left = 277.0
+margin_top = 254.0
+margin_right = 315.0
+margin_bottom = 281.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 3 )
+text = "Quit"
+
+[connection signal="pressed" from="List/TryAgain" to="." method="_on_TryAgain_pressed"]
+[connection signal="pressed" from="List/Quit" to="." method="_on_Quit_pressed"]
