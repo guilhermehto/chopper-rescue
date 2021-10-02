@@ -1,15 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://entities/chopper/Chopper.gd" type="Script" id=1]
-
-[sub_resource type="CubeMesh" id=1]
-size = Vector3( 1.5, 2, 4 )
-
-[sub_resource type="CubeMesh" id=2]
-size = Vector3( 0.4, 1, 3 )
-
-[sub_resource type="PrismMesh" id=3]
-size = Vector3( 3, 2, 1 )
+[ext_resource path="res://entities/chopper/ChopperMesh.tscn" type="PackedScene" id=2]
 
 [sub_resource type="BoxShape" id=4]
 extents = Vector3( 1, 1, 3 )
@@ -17,26 +9,7 @@ extents = Vector3( 1, 1, 3 )
 [node name="Chopper" type="KinematicBody"]
 script = ExtResource( 1 )
 
-[node name="Mesh" type="Spatial" parent="."]
-
-[node name="MeshInstance" type="MeshInstance" parent="Mesh"]
-mesh = SubResource( 1 )
-material/0 = null
-
-[node name="MeshInstance2" type="MeshInstance" parent="Mesh"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3 )
-mesh = SubResource( 2 )
-material/0 = null
-
-[node name="MeshInstance3" type="MeshInstance" parent="Mesh"]
-transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 0, 2, 0 )
-mesh = SubResource( 3 )
-material/0 = null
-
-[node name="MeshInstance4" type="MeshInstance" parent="Mesh"]
-transform = Transform( 4.37114e-08, -3.82137e-15, 1, -8.74228e-08, -1, 0, 1, -8.74228e-08, -4.37114e-08, 0, 2, 0 )
-mesh = SubResource( 3 )
-material/0 = null
+[node name="ChopperMesh" parent="." instance=ExtResource( 2 )]
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1 )

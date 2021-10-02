@@ -7,10 +7,10 @@ const PEDAL_ROTATION_SPEED: float = 2.0
 const GRAVITY: float = 20.0
 # might need some rotational constraints
 
-export var engine_force: float = 1
+export var engine_force: float = 100
 
 var collective: float = 0 setget _set_collective
-
+var momentum = Vector3()
 
 func _physics_process(delta: float) -> void:
 	self.collective = collective + (float(Input.is_action_pressed("collective_up")) - float(Input.is_action_pressed("collective_down"))) * COLLECTIVE_SPEED * delta
@@ -38,10 +38,18 @@ func _physics_process(delta: float) -> void:
 	var forward_vector = Vector3(0, 0, rotation_degrees.x / 90 * 0.2).rotated(Vector3.UP, rotation.y)
 	var sideways_vector = -Vector3(rotation_degrees.z / 90 * 0.2, 0, 0).rotated(Vector3.UP, rotation.z)
 	
-	print(forward_vector)
+	#move_and_collide((global_transform.basis.y * collective * engine_force) + forward_vector + sideways_vector + (Vector3.DOWN * GRAVITY) * delta)
 	
-	move_and_collide((global_transform.basis.y * collective * engine_force) + forward_vector + sideways_vector + (Vector3.DOWN * GRAVITY) * delta)
+	var rotated_momentum = momentum.rotated(Vector3.UP, rotation.y)
+	
+	var frame_movement = move_and_slide((global_transform.basis.y * collective * engine_force) + forward_vector + sideways_vector + rotated_momentum + (Vector3.DOWN * GRAVITY), Vector3.UP)
+	
+	momentum += (frame_movement / 2.5) * delta
+	momentum.y = 0
+	momentum.x = clamp(momentum.y, -10, 10)
+	momentum.z = clamp(momentum.z, -10, 10)
+	print(momentum)
+	
 
 func _set_collective(value: float) -> void:
 	collective = clamp(value, 0, 1)
-	
