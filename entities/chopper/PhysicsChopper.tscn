@@ -9,10 +9,12 @@ extents = Vector3( 1, 1, 3 )
 
 [node name="PhysicsChopper" type="RigidBody"]
 mass = 500.0
+gravity_scale = 3.0
+axis_lock_angular_x = true
+axis_lock_angular_z = true
 linear_damp = 2.0
 angular_damp = 5.0
 script = ExtResource( 2 )
-engine_force = 8000.0
 tail_engine_force = 4000.0
 
 [node name="ChopperMesh" parent="." instance=ExtResource( 1 )]
