@@ -15,20 +15,20 @@ var is_active := false
 
 func initialize(helicopter: Helicopter) -> void:
 	self.helicopter = helicopter
-	set_process(true)
+	set_physics_process(true)
 	is_active = true
 	Debug.connect("started_debugging", self, "_on_started_debugging")
 	Debug.connect("stopped_debugging", self, "_on_stopped_debugging")
 
 func deactivate() -> void:
-	set_process(false)
+	set_physics_process(false)
 	is_active = false
 	Debug.disconnect("started_debugging", self, "_on_started_debugging")
 	Debug.disconnect("stopped_debugging", self, "_on_stopped_debugging")
 
 func _ready() -> void:
 	randomize()
-	set_process(false)
+	set_physics_process(false)
 	
 	noise = OpenSimplexNoise.new()
 
