@@ -19,7 +19,7 @@ func initialize(played_time: float, rescued_count: int) -> void:
 	var seconds_played = int(fmod(played_time, 60.0))
 	var display_seconds_played = str(seconds_played) if seconds_played > 10 else "0%s" % seconds_played
 	
-	var minutes_played = int(seconds_played / 60)
+	var minutes_played = int(played_time / 60)
 	var display_minutes_played = str(minutes_played) if minutes_played > 10 else "0%s" % minutes_played
 	
 	time_played.text = "Total playtime: %s:%s" % [display_minutes_played, display_seconds_played]
