@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://interface/fonts/contrail_one_32.tres" type="DynamicFont" id=1]
 [ext_resource path="res://interface/fonts/contrail_one_16.tres" type="DynamicFont" id=2]
 [ext_resource path="res://interface/MainMenu.gd" type="Script" id=3]
 [ext_resource path="res://game/Game.tscn" type="PackedScene" id=4]
 [ext_resource path="res://interface/options/Options.tscn" type="PackedScene" id=5]
+[ext_resource path="res://interface/SceneSwitcherButton.gd" type="Script" id=6]
+[ext_resource path="res://interface/tutorial/Tutorial.tscn" type="PackedScene" id=7]
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -46,22 +48,14 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 1 )
 text = "Start"
-
-[node name="Options" type="Button" parent="List"]
-margin_left = 265.0
-margin_top = 118.0
-margin_right = 375.0
-margin_bottom = 165.0
-size_flags_horizontal = 4
-size_flags_vertical = 4
-custom_fonts/font = ExtResource( 1 )
-text = "Options"
+script = ExtResource( 6 )
+scene = ExtResource( 7 )
 
 [node name="Quit" type="Button" parent="List"]
 margin_left = 287.0
-margin_top = 180.0
+margin_top = 118.0
 margin_right = 353.0
-margin_bottom = 227.0
+margin_bottom = 165.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
 custom_fonts/font = ExtResource( 1 )
@@ -77,6 +71,4 @@ custom_fonts/font = ExtResource( 2 )
 text = "Game made by @teixol for #ldjam49"
 align = 1
 
-[connection signal="pressed" from="List/Start" to="." method="_on_Start_pressed"]
-[connection signal="pressed" from="List/Options" to="." method="_on_Options_pressed"]
 [connection signal="pressed" from="List/Quit" to="." method="_on_Quit_pressed"]

@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://interface/tutorial/tutorial.png" type="Texture" id=1]
+[ext_resource path="res://interface/Button.tscn" type="PackedScene" id=2]
+[ext_resource path="res://interface/SceneSwitcherButton.gd" type="Script" id=3]
+[ext_resource path="res://interface/tutorial/Controls.tscn" type="PackedScene" id=4]
+
+[node name="Tutorial" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 631.0
+margin_bottom = 360.0
+rect_scale = Vector2( 0.505, 0.5 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" parent="." instance=ExtResource( 2 )]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -56.0498
+margin_top = -48.3574
+margin_right = -15.0498
+margin_bottom = -21.3574
+text = "Next"
+script = ExtResource( 3 )
+scene = ExtResource( 4 )
