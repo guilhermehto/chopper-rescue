@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://game/map/TexturedMaterial.material" type="Material" id=1]
+[ext_resource path="res://entities/buildings/hospital/Hospital.escn" type="PackedScene" id=2]
+
+[node name="Hospital" instance=ExtResource( 2 )]
+
+[node name="Hospital" parent="." index="0"]
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0 )
+material/0 = ExtResource( 1 )
