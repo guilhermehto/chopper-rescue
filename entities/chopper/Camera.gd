@@ -5,8 +5,8 @@ var parent_transform: Transform
 
 var target: Vector3
 
-var default_following_speed: float = 40
-var catch_up_following_speed: float = 40
+var default_following_speed: float = 20
+var catch_up_following_speed: float = 150
 var desired_distance: float
 
 func _ready() -> void:

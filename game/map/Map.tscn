@@ -24,79 +24,133 @@ script = ExtResource( 3 )
 [node name="RescuePoints" type="Node" parent="." index="0"]
 
 [node name="Position3D" type="Position3D" parent="RescuePoints" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -180, 1, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 64.237, 18.7749, 108.656 )
 
 [node name="Position3D2" type="Position3D" parent="RescuePoints" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -227, 1, -75 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 473.747, 55.3012, 125.81 )
 
 [node name="Position3D3" type="Position3D" parent="RescuePoints" index="2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -153, 1, -131 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 473.747, 140.486, 227.465 )
 
 [node name="Position3D4" type="Position3D" parent="RescuePoints" index="3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -253, 1, -208 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 338.913, 54.851, -78.2966 )
 
 [node name="Position3D5" type="Position3D" parent="RescuePoints" index="4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -140, 1, -228 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 116.104, 86.3051, -63.2031 )
 
 [node name="Position3D6" type="Position3D" parent="RescuePoints" index="5"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, -192 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.24484, 63.4073, 363.995 )
 
-[node name="Position3D7" type="Position3D" parent="RescuePoints" index="6"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 82, 1, -124 )
+[node name="Position3D9" type="Position3D" parent="RescuePoints" index="6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.0478, 28.6268, 575.585 )
 
-[node name="Position3D8" type="Position3D" parent="RescuePoints" index="7"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 153, 1, -192 )
+[node name="Position3D10" type="Position3D" parent="RescuePoints" index="7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 484.589, 33.5957, 479.225 )
 
-[node name="Position3D9" type="Position3D" parent="RescuePoints" index="8"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 103, 1, -282 )
+[node name="Position3D7" type="Position3D" parent="RescuePoints" index="8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -52.7032, 33.5448, 431.64 )
 
-[node name="Position3D10" type="Position3D" parent="RescuePoints" index="9"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 213, 1, -288 )
+[node name="Position3D8" type="Position3D" parent="RescuePoints" index="9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -150.307, 76.3914, 259.265 )
 
 [node name="Position3D11" type="Position3D" parent="RescuePoints" index="10"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 293, 1, -196 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 298.331, 18.7749, -613.688 )
 
 [node name="Position3D12" type="Position3D" parent="RescuePoints" index="11"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 208, 1, -78 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 265.834, 55.3012, -186.691 )
 
 [node name="Position3D13" type="Position3D" parent="RescuePoints" index="12"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 280, 1, -6 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 164.178, 140.486, -180.791 )
 
 [node name="Position3D14" type="Position3D" parent="RescuePoints" index="13"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 186, 1, 33 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 481.622, 54.851, -330.545 )
 
 [node name="Position3D15" type="Position3D" parent="RescuePoints" index="14"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 90, 1, 91 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 454.846, 86.3051, -538.434 )
 
 [node name="Position3D16" type="Position3D" parent="RescuePoints" index="15"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 231, 1, 149 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 27.6476, 63.4073, -662.591 )
 
 [node name="Position3D17" type="Position3D" parent="RescuePoints" index="16"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 296, 1, 262 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -183.942, 28.6268, -619.491 )
 
 [node name="Position3D18" type="Position3D" parent="RescuePoints" index="17"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 1, 276 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -87.5823, 33.5957, -179.562 )
 
 [node name="Position3D19" type="Position3D" parent="RescuePoints" index="18"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 41, 1, 179 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -39.9973, 33.5448, -721.273 )
 
 [node name="Position3D20" type="Position3D" parent="RescuePoints" index="19"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -51, 1, 278 )
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 135.741, 76.3914, -822.301 )
 
 [node name="Position3D21" type="Position3D" parent="RescuePoints" index="20"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 278, 1, 306 )
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -481.696, 18.7749, -367.372 )
 
 [node name="Position3D22" type="Position3D" parent="RescuePoints" index="21"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -125, 1, 188 )
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -908.692, 55.3012, -399.869 )
+
+[node name="Position3D23" type="Position3D" parent="RescuePoints" index="22"]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -914.593, 140.486, -501.524 )
+
+[node name="Position3D24" type="Position3D" parent="RescuePoints" index="23"]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -764.838, 54.851, -184.081 )
+
+[node name="Position3D25" type="Position3D" parent="RescuePoints" index="24"]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -556.949, 86.3051, -210.857 )
+
+[node name="Position3D26" type="Position3D" parent="RescuePoints" index="25"]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -432.793, 63.4073, -638.055 )
+
+[node name="Position3D27" type="Position3D" parent="RescuePoints" index="26"]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -475.893, 28.6268, -849.645 )
+
+[node name="Position3D28" type="Position3D" parent="RescuePoints" index="27"]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -915.822, 33.5957, -753.285 )
+
+[node name="Position3D29" type="Position3D" parent="RescuePoints" index="28"]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -374.111, 33.5448, -705.7 )
+
+[node name="Position3D30" type="Position3D" parent="RescuePoints" index="29"]
+transform = Transform( -1, 0, -2.06632e-07, 0, 1, 0, 2.06632e-07, 0, -1, -273.083, 76.3914, -529.962 )
+
+[node name="Position3D31" type="Position3D" parent="RescuePoints" index="30"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -733.478, 18.7749, 355.304 )
+
+[node name="Position3D32" type="Position3D" parent="RescuePoints" index="31"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -700.981, 55.3012, -71.6928 )
+
+[node name="Position3D33" type="Position3D" parent="RescuePoints" index="32"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -599.326, 140.486, -77.593 )
+
+[node name="Position3D34" type="Position3D" parent="RescuePoints" index="33"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -916.769, 54.851, 72.1611 )
+
+[node name="Position3D35" type="Position3D" parent="RescuePoints" index="34"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -889.993, 86.3051, 280.05 )
+
+[node name="Position3D36" type="Position3D" parent="RescuePoints" index="35"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -462.795, 63.4073, 404.207 )
+
+[node name="Position3D37" type="Position3D" parent="RescuePoints" index="36"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -251.205, 28.6268, 361.107 )
+
+[node name="Position3D38" type="Position3D" parent="RescuePoints" index="37"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -347.565, 33.5957, -78.8223 )
+
+[node name="Position3D39" type="Position3D" parent="RescuePoints" index="38"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -395.15, 33.5448, 462.889 )
+
+[node name="Position3D40" type="Position3D" parent="RescuePoints" index="39"]
+transform = Transform( -1.62921e-07, 0, 1, 0, 1, 0, -1, 0, -1.62921e-07, -570.888, 76.3914, 563.917 )
 
 [node name="LandingPad" parent="." index="1" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22, -0.245135, -5 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.245, -5 )
 
 [node name="Hospital" parent="." index="2" instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 51, 1, -43 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1278, 1, -43 )
 
 [node name="Map" parent="." index="3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -559.028, -1.52588e-05, -504.205 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -584.243, -1.52588e-05, -504.205 )
 material/0 = ExtResource( 5 )
 
 [node name="StaticBody" type="StaticBody" parent="Map" index="0"]
@@ -105,7 +159,7 @@ material/0 = ExtResource( 5 )
 shape = SubResource( 1 )
 
 [node name="Trees" parent="." index="4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -559.028, -1.52588e-05, -504.205 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -584.243, -1.52588e-05, -504.205 )
 
 [node name="Tree" parent="Trees" index="0"]
 material/0 = ExtResource( 5 )
@@ -675,7 +729,7 @@ material/0 = ExtResource( 5 )
 material/0 = ExtResource( 5 )
 
 [node name="Map001" parent="." index="5"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 186.81, -1.52588e-05, -504.205 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 161.595, -1.52588e-05, -504.205 )
 material/0 = ExtResource( 5 )
 
 [node name="StaticBody" type="StaticBody" parent="Map001" index="0"]
@@ -684,7 +738,7 @@ material/0 = ExtResource( 5 )
 shape = SubResource( 2 )
 
 [node name="Trees001" parent="." index="6"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 186.81, -1.52588e-05, -504.205 )
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 161.595, -1.52588e-05, -504.205 )
 
 [node name="Tree189" parent="Trees001" index="0"]
 material/0 = ExtResource( 5 )
@@ -1254,7 +1308,7 @@ material/0 = ExtResource( 5 )
 material/0 = ExtResource( 5 )
 
 [node name="Map002" parent="." index="7"]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 186.81, -1.52588e-05, 243.019 )
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 161.595, -1.52588e-05, 243.019 )
 material/0 = ExtResource( 5 )
 
 [node name="StaticBody" type="StaticBody" parent="Map002" index="0"]
@@ -1263,7 +1317,7 @@ material/0 = ExtResource( 5 )
 shape = SubResource( 3 )
 
 [node name="Trees002" parent="." index="8"]
-transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 186.81, -1.52588e-05, 243.019 )
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, 161.595, -1.52588e-05, 243.019 )
 
 [node name="Tree378" parent="Trees002" index="0"]
 material/0 = ExtResource( 5 )
@@ -1833,7 +1887,7 @@ material/0 = ExtResource( 5 )
 material/0 = ExtResource( 5 )
 
 [node name="Map003" parent="." index="9"]
-transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -559.028, -1.52588e-05, 243.019 )
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -584.243, -1.52588e-05, 243.019 )
 material/0 = ExtResource( 5 )
 
 [node name="StaticBody" type="StaticBody" parent="Map003" index="0"]
@@ -1842,7 +1896,7 @@ material/0 = ExtResource( 5 )
 shape = SubResource( 4 )
 
 [node name="Trees003" parent="." index="10"]
-transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -559.028, -1.52588e-05, 243.019 )
+transform = Transform( 1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, -584.243, -1.52588e-05, 243.019 )
 
 [node name="Tree567" parent="Trees003" index="0"]
 material/0 = ExtResource( 5 )
@@ -2410,3 +2464,7 @@ material/0 = ExtResource( 5 )
 
 [node name="Tree755" parent="Trees003" index="188"]
 material/0 = ExtResource( 5 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="." index="11"]
+transform = Transform( 0.466881, 0.546095, -0.69556, 0, 0.786547, 0.61753, 0.88432, -0.288313, 0.367224, 0, 22.2779, 0 )
+editor_only = true
