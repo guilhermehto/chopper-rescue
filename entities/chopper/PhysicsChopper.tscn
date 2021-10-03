@@ -86,11 +86,9 @@ script = ExtResource( 9 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DoorAudio/Boarding"]
 stream = ExtResource( 11 )
-volume_db = 10.0
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="DoorAudio/Boarding"]
 stream = ExtResource( 10 )
-volume_db = 10.0
 
 [node name="Unboarding" type="Node" parent="DoorAudio"]
 
