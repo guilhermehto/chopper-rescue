@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://interface/compass/FuelIndicator.escn" type="PackedScene" id=1]
+[ext_resource path="res://interface/compass/FuelIndicator.gd" type="Script" id=2]
+
+[node name="FuelIndicator" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="FuelIndicator" parent="." index="0"]
+cast_shadow = 0
+
+[node name="Pointer" parent="." index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0213759, 0.0804168 )
+cast_shadow = 0

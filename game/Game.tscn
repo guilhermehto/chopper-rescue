@@ -71,11 +71,35 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Notification" type="Label" parent="Level/GUI/List"]
-modulate = Color( 1, 1, 1, 0 )
+[node name="Row" type="HBoxContainer" parent="Level/GUI/List"]
+margin_left = 548.0
 margin_right = 592.0
 margin_bottom = 21.0
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="Rescuees" type="Label" parent="Level/GUI/List/Row"]
+margin_right = 20.0
+margin_bottom = 21.0
 custom_fonts/font = ExtResource( 11 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "0/4"
+
+[node name="TimeLeft" type="Label" parent="Level/GUI/List/Row"]
+margin_left = 24.0
+margin_right = 44.0
+margin_bottom = 21.0
+custom_fonts/font = ExtResource( 11 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "96'"
+
+[node name="Notification" type="Label" parent="Level/GUI/List"]
+modulate = Color( 1, 1, 1, 0 )
+margin_top = 25.0
+margin_right = 592.0
+margin_bottom = 46.0
+custom_fonts/font = ExtResource( 11 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 text = "Posso falar uma coisinha?"
 align = 1
 valign = 1
@@ -85,4 +109,6 @@ autowrap = true
 
 [connection signal="game_ended" from="Level" to="." method="_on_Level_game_ended"]
 [connection signal="died" from="Level/PhysicsChopper" to="Level" method="_on_PhysicsChopper_died"]
+[connection signal="passenger_boarded" from="Level/PhysicsChopper" to="Level/GUI" method="_on_PhysicsChopper_passenger_boarded"]
 [connection signal="rescuee_unboarded" from="Level/PhysicsChopper" to="." method="_on_PhysicsChopper_rescuee_unboarded"]
+[connection signal="rescuee_unboarded" from="Level/PhysicsChopper" to="Level/GUI" method="_on_PhysicsChopper_rescuee_unboarded"]

@@ -1,4 +1,5 @@
 extends Spatial
+class_name RescueeGroup
 
 signal rescuee_group_died
 signal groupe_rescued

@@ -7,6 +7,7 @@ signal rescuee_unboarded(carrying, capacity)
 
 onready var mesh: Spatial = $ChopperMesh
 onready var compass: Spatial = $Camera/Compass
+onready var fuel_indicator: Spatial = $Camera/FuelIndicator
 onready var timer: Timer = $Timer
 
 signal died
@@ -34,6 +35,9 @@ func unboard_rescuee() -> void:
 	rescuees_being_carried -= 1
 	emit_signal("rescuee_unboarded", rescuees_being_carried, rescuee_capacity)
 	print("unboarded! left: %s" % rescuees_being_carried) 
+
+func _ready() -> void:
+	fuel_indicator.max_fuel = max_fuel_time
 
 func _physics_process(delta: float) -> void:
 	if dead:
@@ -96,6 +100,7 @@ func _on_Timer_timeout() -> void:
 
 func _set_fuel_time(value: float) -> void:
 	fuel_time = clamp(value, 0, max_fuel_time)
+	fuel_indicator.fuel = fuel_time
 
 func _on_PhysicsChopper_body_entered(body: Node) -> void:
 	#This is broken if you're not moving forward or sideways

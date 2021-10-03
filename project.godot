@@ -34,6 +34,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://entities/rescuee_group/Rescuee.gd"
 }, {
+"base": "Spatial",
+"class": "RescueeGroup",
+"language": "GDScript",
+"path": "res://entities/rescuee_group/RescueeGroup.gd"
+}, {
 "base": "Node",
 "class": "Weather",
 "language": "GDScript",
@@ -45,6 +50,7 @@ _global_script_class_icons={
 "Helicopter": "",
 "Map": "",
 "Rescuee": "",
+"RescueeGroup": "",
 "Weather": ""
 }
 
