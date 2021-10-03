@@ -61,3 +61,4 @@ func _spawn_new_group() -> void:
 	map.add_child(rescuee_group)
 	rescuee_group.connect("rescuee_group_died", self, "_on_rescuee_group_died")
 	rescuee_group.connect("groupe_rescued", self, "_on_rescuee_group_rescued")
+	helicopter.compass.target = position.global_transform.origin

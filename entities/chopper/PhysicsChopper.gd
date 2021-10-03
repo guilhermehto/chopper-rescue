@@ -6,6 +6,7 @@ signal passenger_boarded(carrying, capacity)
 signal rescuee_unboarded(carrying, capacity)
 
 onready var mesh: Spatial = $ChopperMesh
+onready var compass: Spatial = $Camera/Compass
 onready var timer: Timer = $Timer
 
 signal died
