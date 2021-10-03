@@ -1,6 +1,8 @@
 extends KinematicBody
 class_name Rescuee
 
+signal picked_up
+
 export var move_speed: float = 3.0
 
 var target: Transform

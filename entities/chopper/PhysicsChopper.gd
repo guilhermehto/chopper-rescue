@@ -105,6 +105,7 @@ func _on_RescueArea_body_entered(body: Node) -> void:
 	print("yep %s" % body.name)
 	if body is Rescuee and rescuees_being_carried < rescuee_capacity:
 		rescuees_being_carried += 1
+		body.emit_signal("picked_up")
 		body.queue_free()
 		emit_signal("passenger_boarded", rescuees_being_carried, rescuee_capacity)
 		
