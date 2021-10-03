@@ -8,6 +8,7 @@ signal rescuee_unboarded(carrying, capacity)
 onready var mesh: Spatial = $ChopperMesh
 onready var compass: Spatial = $Camera/Compass
 onready var fuel_indicator: Spatial = $Camera/FuelIndicator
+onready var door_audio: DoorAudio = $DoorAudio
 onready var timer: Timer = $Timer
 
 signal died
@@ -35,7 +36,7 @@ func unboard_rescuee() -> void:
 		return
 	rescuees_being_carried -= 1
 	emit_signal("rescuee_unboarded", rescuees_being_carried, rescuee_capacity)
-	print("unboarded! left: %s" % rescuees_being_carried) 
+	door_audio.play_unboarding()
 
 func _ready() -> void:
 	fuel_indicator.max_fuel = max_fuel_time
@@ -130,3 +131,4 @@ func _on_RescueArea_body_entered(body: Node) -> void:
 		body.emit_signal("picked_up")
 		body.queue_free()
 		emit_signal("passenger_boarded", rescuees_being_carried, rescuee_capacity)
+		door_audio.play_boarding()

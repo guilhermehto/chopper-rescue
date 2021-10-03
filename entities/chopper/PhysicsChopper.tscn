@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://audio/helicopter.ogg" type="AudioStream" id=1]
 [ext_resource path="res://entities/chopper/PhysicsChopper.gd" type="Script" id=2]
@@ -8,6 +8,12 @@
 [ext_resource path="res://interface/compass/FuelIndicator.tscn" type="PackedScene" id=6]
 [ext_resource path="res://entities/chopper/HelicopterMesh.tscn" type="PackedScene" id=7]
 [ext_resource path="res://entities/chopper/HelicopterCrash.tscn" type="PackedScene" id=8]
+[ext_resource path="res://entities/chopper/DoorAudio.gd" type="Script" id=9]
+[ext_resource path="res://audio/unboarding_2.ogg" type="AudioStream" id=10]
+[ext_resource path="res://audio/unboarding_1.ogg" type="AudioStream" id=11]
+[ext_resource path="res://audio/boarding_1.ogg" type="AudioStream" id=12]
+[ext_resource path="res://audio/boarding_2.ogg" type="AudioStream" id=13]
+[ext_resource path="res://audio/boarding_3.ogg" type="AudioStream" id=14]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 1, 1.72123, 3.74328 )
@@ -70,8 +76,32 @@ transform = Transform( 1, 0, 2.38419e-07, 0, 1, 0, -2.38419e-07, 0, 1, 0, 0, 0 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource( 1 )
-unit_db = 30.0
+unit_db = 10.0
 autoplay = true
+
+[node name="DoorAudio" type="Node" parent="."]
+script = ExtResource( 9 )
+
+[node name="Boarding" type="Node" parent="DoorAudio"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DoorAudio/Boarding"]
+stream = ExtResource( 11 )
+volume_db = 10.0
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="DoorAudio/Boarding"]
+stream = ExtResource( 10 )
+volume_db = 10.0
+
+[node name="Unboarding" type="Node" parent="DoorAudio"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="DoorAudio/Unboarding"]
+stream = ExtResource( 12 )
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="DoorAudio/Unboarding"]
+stream = ExtResource( 13 )
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="DoorAudio/Unboarding"]
+stream = ExtResource( 14 )
 
 [connection signal="body_entered" from="." to="." method="_on_PhysicsChopper_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

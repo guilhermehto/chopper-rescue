@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/boarding_2.ogg-34ed2f00626ea8f7698fd48716fa1031.oggstr"
+
+[deps]
+
+source_file="res://audio/boarding_2.ogg"
+dest_files=[ "res://.import/boarding_2.ogg-34ed2f00626ea8f7698fd48716fa1031.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

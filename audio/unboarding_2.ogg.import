@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/unboarding_2.ogg-405788777c565b0471bbf8e8db1b4c4a.oggstr"
+
+[deps]
+
+source_file="res://audio/unboarding_2.ogg"
+dest_files=[ "res://.import/unboarding_2.ogg-405788777c565b0471bbf8e8db1b4c4a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
