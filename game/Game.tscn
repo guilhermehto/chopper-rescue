@@ -22,6 +22,7 @@ end_game_menu_scene = ExtResource( 4 )
 
 [node name="Level" type="Spatial" parent="."]
 script = ExtResource( 5 )
+rescuee_group_scene = ExtResource( 13 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="Level"]
 transform = Transform( 0.866026, 3.99273e-09, -0.5, 0.353553, 0.707107, 0.612373, 0.353553, -0.707107, 0.612373, 0, 81, 0 )
@@ -82,7 +83,5 @@ autowrap = true
 
 [node name="Tween" type="Tween" parent="Level/GUI"]
 
-[node name="RescueGroup" parent="Level" instance=ExtResource( 13 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 175, 3, -160 )
-
-[connection signal="died" from="Level/PhysicsChopper" to="." method="_on_PhysicsChopper_died"]
+[connection signal="game_ended" from="Level" to="." method="_on_Level_game_ended"]
+[connection signal="died" from="Level/PhysicsChopper" to="Level" method="_on_PhysicsChopper_died"]
