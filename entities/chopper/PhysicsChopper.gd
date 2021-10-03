@@ -104,7 +104,7 @@ func _set_fuel_time(value: float) -> void:
 
 func _on_PhysicsChopper_body_entered(body: Node) -> void:
 	#This is broken if you're not moving forward or sideways
-	if linear_velocity.length() > 10:
+	if linear_velocity.length() > 15:
 		_die()
 
 func _on_LandingGear_landed() -> void:
