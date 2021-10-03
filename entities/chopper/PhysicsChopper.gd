@@ -1,6 +1,9 @@
 extends RigidBody
 class_name Helicopter
 
+signal landing_status_changed(is_landed)
+signal passenger_boarded(carrying, capacity)
+
 onready var mesh: Spatial = $ChopperMesh
 onready var timer: Timer = $Timer
 
@@ -15,11 +18,13 @@ export var tail_engine_force: float = 5000
 export var rotate_speed: float = .5
 export var max_fuel_time: float = 60
 export var died_signal_timer: float = 5.0
+export var rescuee_capacity: int = 4
 
 var collective: float = 0 setget _set_collective
 var fuel_time: float = max_fuel_time setget _set_fuel_time
 var dead: bool = false
 var is_landed: bool = true
+var rescuees_being_carried: int
 
 func _physics_process(delta: float) -> void:
 	if dead:
@@ -85,13 +90,21 @@ func _set_fuel_time(value: float) -> void:
 
 func _on_PhysicsChopper_body_entered(body: Node) -> void:
 	#This is broken if you're not moving forward or sideways
-	if linear_velocity.length() > 5:
+	if linear_velocity.length() > 10:
 		_die()
 
 func _on_LandingGear_landed() -> void:
-	print("landed")
 	is_landed = true
+	emit_signal("landing_status_changed", is_landed)
 
 func _on_LandingGear_took_off() -> void:
-	print("took off")
 	is_landed = false
+	emit_signal("landing_status_changed", is_landed)
+
+func _on_RescueArea_body_entered(body: Node) -> void:
+	print("yep %s" % body.name)
+	if body is Rescuee and rescuees_being_carried < rescuee_capacity:
+		rescuees_being_carried += 1
+		body.queue_free()
+		emit_signal("passenger_boarded", rescuees_being_carried, rescuee_capacity)
+		
