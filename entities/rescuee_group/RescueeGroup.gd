@@ -7,7 +7,7 @@ signal groupe_rescued
 onready var rescuees: Spatial = $Rescuees
 onready var timer: Timer = $Timer
 
-export var time_to_die: float = 45
+export var time_to_die: float = 75
 
 var helicopter: Helicopter 
 
@@ -23,7 +23,7 @@ func _ready() -> void:
 		rescuee.connect("picked_up", self, "_on_rescuee_picked_up")
 	
 	time_to_die += global_transform.origin.distance_to(Vector3.ZERO) / 20
-	time_to_die += number_of_rescuees / 4 * 15
+	time_to_die += number_of_rescuees / 4 * 35
 	timer.wait_time = time_to_die
 	timer.connect("timeout", self, "_on_timer_timeout")
 	timer.start()
