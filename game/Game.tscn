@@ -85,3 +85,4 @@ autowrap = true
 
 [connection signal="game_ended" from="Level" to="." method="_on_Level_game_ended"]
 [connection signal="died" from="Level/PhysicsChopper" to="Level" method="_on_PhysicsChopper_died"]
+[connection signal="rescuee_unboarded" from="Level/PhysicsChopper" to="." method="_on_PhysicsChopper_rescuee_unboarded"]

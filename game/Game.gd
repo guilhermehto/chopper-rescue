@@ -16,3 +16,7 @@ func _on_Level_game_ended() -> void:
 	add_child(end_game_menu)
 	end_game_menu.initialize(game_time, rescued)
 	level.queue_free()
+
+
+func _on_PhysicsChopper_rescuee_unboarded(carrying, capacity) -> void:
+	rescued += 1

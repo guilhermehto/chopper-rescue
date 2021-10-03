@@ -3,6 +3,7 @@ class_name Helicopter
 
 signal landing_status_changed(is_landed)
 signal passenger_boarded(carrying, capacity)
+signal rescuee_unboarded(carrying, capacity)
 
 onready var mesh: Spatial = $ChopperMesh
 onready var timer: Timer = $Timer
@@ -25,6 +26,13 @@ var fuel_time: float = max_fuel_time setget _set_fuel_time
 var dead: bool = false
 var is_landed: bool = true
 var rescuees_being_carried: int
+
+func unboard_rescuee() -> void:
+	if rescuees_being_carried == 0:
+		return
+	rescuees_being_carried -= 1
+	emit_signal("rescuee_unboarded", rescuees_being_carried, rescuee_capacity)
+	print("unboarded! left: %s" % rescuees_being_carried) 
 
 func _physics_process(delta: float) -> void:
 	if dead:
@@ -108,4 +116,3 @@ func _on_RescueArea_body_entered(body: Node) -> void:
 		body.emit_signal("picked_up")
 		body.queue_free()
 		emit_signal("passenger_boarded", rescuees_being_carried, rescuee_capacity)
-		
