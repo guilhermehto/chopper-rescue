@@ -125,7 +125,6 @@ func _on_LandingGear_took_off() -> void:
 	emit_signal("landing_status_changed", is_landed)
 
 func _on_RescueArea_body_entered(body: Node) -> void:
-	print("yep %s" % body.name)
 	if body is Rescuee and rescuees_being_carried < rescuee_capacity:
 		rescuees_being_carried += 1
 		body.emit_signal("picked_up")
