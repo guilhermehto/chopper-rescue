@@ -22,6 +22,7 @@ export var rotate_speed: float = .5
 export var max_fuel_time: float = 60
 export var died_signal_timer: float = 5.0
 export var rescuee_capacity: int = 4
+export var crash_scene: PackedScene
 
 var collective: float = 0 setget _set_collective
 var fuel_time: float = max_fuel_time setget _set_fuel_time
@@ -86,6 +87,8 @@ func _check_fuel() -> void:
 	_die()
 
 func _die() -> void:
+	if dead:
+		return
 	dead = true
 	self.fuel_time = 0
 	timer.wait_time = died_signal_timer
@@ -104,7 +107,12 @@ func _set_fuel_time(value: float) -> void:
 
 func _on_PhysicsChopper_body_entered(body: Node) -> void:
 	#This is broken if you're not moving forward or sideways
-	if linear_velocity.length() > 15:
+	if linear_velocity.length() > 15 and not dead:
+		mesh.queue_free()
+		var crash = crash_scene.instance()
+		add_child(crash)
+		crash.transform.origin = Vector3.ZERO
+		crash.emitting = true
 		_die()
 
 func _on_LandingGear_landed() -> void:
